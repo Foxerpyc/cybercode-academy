@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberCode Academy | TTTH 6214 Final Project</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="cyber-theme">
+
+    <!-- Visual Effect -->
+    <div class="scanline"></div>
+
+    <!-- Sound Effects -->
+    <audio id="click-sound" src="assets/click.mp3" preload="auto"></audio>
+    <audio id="success-sound" src="assets/success.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="assets/error.mp3" preload="auto"></audio>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="logo">
+            CyberCode Academy
+            <span class="version">HTML Learning System</span>
+        </div>
+
+        <div class="progress-section">
+            <span id="rank-text">LEVEL: BEGINNER</span>
+            <div class="xp-container">
+                <div id="xp-bar"></div>
+            </div>
+        </div>
+
+        <button id="test-btn" onclick="runTest()">TEST</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+
+        <!-- Editor -->
+        <div class="pane editor-pane">
+            <div class="pane-tag">HTML EDITOR</div>
+
+            <textarea
+                id="htmlInput"
+                placeholder="Type HTML code here..."
+                oninput="showHint()"
+            ></textarea>
+
+            <!-- Hint Area -->
+            <div id="hint">Tip: Start with a heading using &lt;h1&gt;</div>
+        </div>
+
+        <!-- Preview -->
+        <div class="pane preview-pane">
+            <div class="pane-tag">LIVE PREVIEW</div>
+            <div id="display"></div>
+        </div>
+
+        <!-- Terminal -->
+        <div class="pane terminal-pane">
+            <div class="pane-tag">TEST TERMINAL</div>
+            <div id="history">
+                > System ready.<br>
+                > Click TEST to evaluate your HTML.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
